@@ -1,0 +1,4 @@
+#!/bin/sh
+
+/usr/bin/find /var/spool/pbs/mom_logs -type f -not -name \*.gz -not -name `/bin/date +%Y%m%d` -exec /bin/gzip -9 {} \;
+/usr/bin/find /var/spool/pbs/mom_logs -type f -mtime +60 -name \*.gz -exec rm -f {} \;

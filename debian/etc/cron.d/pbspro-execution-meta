@@ -1,0 +1,2 @@
+MAILTO=vchlumsky@cesnet.cz
+26-59/30 * * * * root /var/spool/pbs/mom_scripts/touch_scratch

@@ -1,0 +1,7 @@
+Package: pbspro-execution-meta-scripts
+Version: 1.0-3
+Maintainer: Vaclav Chlumsky <vchlumsky@cesnet.cz>
+Section: utils
+Architecture: all
+Depends: pbspro-execution
+Description: Additional scripts to pbspro-execution
