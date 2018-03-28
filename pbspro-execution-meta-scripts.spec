@@ -26,6 +26,10 @@ mkdir -p %{buildroot}/var/spool/pbs/mom_scripts/
 cp %{_builddir}/pbspro-execution-meta-scripts-%{version}/etc/* %{buildroot}/etc -R
 cp %{_builddir}/pbspro-execution-meta-scripts-%{version}/var/spool/pbs/mom_scripts/* %{buildroot}/var/spool/pbs/mom_scripts/ -R
 
+%post
+chmod 644 /etc/cron.d/pbspro-execution-meta
+chmod 755 /etc/cron.daily/pbspro-execution-meta
+service crond reload
 
 %files
 /*

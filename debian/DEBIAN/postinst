@@ -1,0 +1,5 @@
+#!/bin/sh -e
+
+chmod 644 /etc/cron.d/pbspro-execution-meta
+chmod 755 /etc/cron.daily/pbspro-execution-meta
+service cron reload

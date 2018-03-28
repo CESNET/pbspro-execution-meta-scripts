@@ -2,8 +2,10 @@
 # Chmatak Ivan (c) 2014
 # - regularly touch SCRATCHDIR of running jobs
 
-MOMCTL=$(type -p momctl)
-PRINTJOB=$(type -p printjob)
+export PATH=$PATH:/usr/sbin:/usr/bin:/opt/pbs/sbin:/opt/pbs/bin
+
+MOMCTL="momctl"
+PRINTJOB="printjob"
 MAILTO=vchlumsky@cesnet.cz
 
 # determinine running jobs from momctl
