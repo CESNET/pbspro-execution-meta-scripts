@@ -33,10 +33,11 @@ do
 	fi
 
 	# check the consistency
-	SCRATCH_BY_EXEC=`$PRINTJOB /var/spool/pbs/mom_priv/jobs/$i.JB 2>/dev/null | sed -n 's/^exec_vnode =.*'$(hostname -s)'[^+]*scratch_\([^+=]\+\)=.*/\1/p'`
-	if [ "$SCRATCH_BY_EXEC" ] && [ ! "$SCRATCHDIR" ]
+	SCRATCH_BY_EXEC_TYPE=`$PRINTJOB /var/spool/pbs/mom_priv/jobs/$i.JB 2>/dev/null | sed -n 's/^exec_vnode =.*'$(hostname -s)'[^+]*scratch_\([^+=]\+\)=.*/\1/p'`
+	SCRATCH_BY_EXEC_SIZE=`$PRINTJOB /var/spool/pbs/mom_priv/jobs/$i.JB 2>/dev/null | sed -n 's/^exec_vnode =.*'$(hostname -s)'[^+]*scratch_[^+=]\+=\([0-9]\+\).*/\1/p'`
+	if [ "$SCRATCH_BY_EXEC_SIZE" ] && [ "$SCRATCH_BY_EXEC_SIZE" -gt "0" ] && [ ! "$SCRATCHDIR" ]
 	then
-		ERRORMSG="$i requests scratch $SCRATCH_BY_EXEC on $(hostname -s) but SCRATCHDIR not set"
+		ERRORMSG="$i requests scratch $SCRATCH_BY_EXEC_TYPE on $(hostname -s) but SCRATCHDIR not set"
 		logger -p daemon.err -t scratch_cleanup "$ERRORMSG"
 		echo $ERRORMSG | mail -s "SCRATCHDIR error" $MAILTO 2>/dev/null
 	fi
