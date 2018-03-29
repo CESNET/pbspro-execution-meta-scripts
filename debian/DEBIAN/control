@@ -1,5 +1,5 @@
 Package: pbspro-execution-meta-scripts
-Version: 1.0-4
+Version: 1.0-5
 Maintainer: Vaclav Chlumsky <vchlumsky@cesnet.cz>
 Section: utils
 Architecture: all
