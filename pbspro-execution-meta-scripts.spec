@@ -1,6 +1,6 @@
 Name:    pbspro-execution-meta-scripts
 Version: 1.0
-Release: 7
+Release: 8
 Summary: pbspro-execution-meta-scripts
 
 License: Public Domain
