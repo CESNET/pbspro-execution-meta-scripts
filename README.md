@@ -1,1 +1,1 @@
-# pbspro-execution-meta-scripts
+# openpbs-execution-meta-scripts

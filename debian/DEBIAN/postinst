@@ -1,5 +1,5 @@
 #!/bin/sh -e
 
-chmod 644 /etc/cron.d/pbspro-execution-meta
-chmod 755 /etc/cron.daily/pbspro-execution-meta
+chmod 644 /etc/cron.d/openpbs-execution-meta
+chmod 755 /etc/cron.daily/openpbs-execution-meta
 service cron reload

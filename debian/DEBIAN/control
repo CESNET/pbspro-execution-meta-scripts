@@ -1,7 +1,8 @@
-Package: pbspro-execution-meta-scripts
+Package: openpbs-execution-meta-scripts
 Version: 1.0-8
 Maintainer: Vaclav Chlumsky <vchlumsky@cesnet.cz>
 Section: utils
 Architecture: all
-Depends: pbspro-execution
-Description: Additional scripts to pbspro-execution
+Depends: openpbs-execution
+Conflicts: pbspro-execution-meta-scripts
+Description: Additional scripts to openpbs-execution
