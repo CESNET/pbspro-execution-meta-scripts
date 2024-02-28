@@ -1,5 +1,5 @@
 Package: openpbs-execution-meta-scripts
-Version: 1.0-8
+Version: 1.0-9
 Maintainer: Vaclav Chlumsky <vchlumsky@cesnet.cz>
 Section: utils
 Architecture: all
